@@ -30,5 +30,16 @@ public class CreateAccountPage {
     @FindBy(xpath = "//input[@name='psgdpr']")
     WebElement policyCheckbox;
 
+    public void fillForm(){
+
+        socialTitleMrs.click();
+        firstName.sendKeys("Magdalena");
+        lastName.sendKeys("Dziob");
+        email.sendKeys("magda@email.com");
+        password.sendKeys("haslo");
+        policyCheckbox.click();
+    }
+
+    public void quit(WebDriver driver){driver.quit();}
 
 }
