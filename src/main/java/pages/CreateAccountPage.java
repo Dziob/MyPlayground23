@@ -27,8 +27,13 @@ public class CreateAccountPage {
     @FindBy(id = "field-password")
     WebElement password;
 
+    @FindBy(xpath = "//input[@name='customer_privacy']")
+    WebElement customerDataPrivacyCheckbox;
     @FindBy(xpath = "//input[@name='psgdpr']")
     WebElement policyCheckbox;
+
+    @FindBy(xpath = "//input[@name='submitCreate']")
+    WebElement saveBtn;
 
     public void fillForm(){
 
@@ -37,7 +42,13 @@ public class CreateAccountPage {
         lastName.sendKeys("Dziob");
         email.sendKeys("magda@email.com");
         password.sendKeys("haslo");
+        customerDataPrivacyCheckbox.click();
         policyCheckbox.click();
+
+    }
+
+    public void sendForm(){
+        saveBtn.click();
     }
 
     public void quit(WebDriver driver){driver.quit();}
