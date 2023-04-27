@@ -17,13 +17,26 @@ public class HomePage {
     @FindBy(xpath = "//a[@class='logout hidden-sm-down']")
     WebElement customerIcon;
 
+    @FindBy(xpath = "//a[@class='logout hidden-sm-down']")
+    WebElement signOutBtn;
 
     public void signIn() {
         signInBtn.click();
-
     }
     public boolean accountConfirm() {
         return customerIcon.isDisplayed();
+    }
+
+    public void logOut(){
+        signOutBtn.click();
+    }
+
+    public boolean logOutConfirm(){
+        return signInBtn.isDisplayed();
+    }
+
+    public void quit(WebDriver driver){
+        driver.quit();
     }
 
 
