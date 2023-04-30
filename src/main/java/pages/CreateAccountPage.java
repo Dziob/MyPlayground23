@@ -32,7 +32,7 @@ public class CreateAccountPage {
     @FindBy(xpath = "//input[@name='psgdpr']")
     WebElement policyCheckbox;
 
-    @FindBy(xpath = "//input[@name='submitCreate']")
+    @FindBy(xpath = "//button[@class='btn btn-primary form-control-submit float-xs-right']")
     WebElement saveBtn;
 
     public void fillForm(){
@@ -40,7 +40,7 @@ public class CreateAccountPage {
         socialTitleMrs.click();
         firstName.sendKeys("Magdalena");
         lastName.sendKeys("Dziob");
-        email.sendKeys("magda@email.com");
+        email.sendKeys("magda3@email.com");
         password.sendKeys("haslo");
         customerDataPrivacyCheckbox.click();
         policyCheckbox.click();
