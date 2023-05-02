@@ -20,6 +20,9 @@ public class HomePage {
     @FindBy(xpath = "//a[@class='logout hidden-sm-down']")
     WebElement signOutBtn;
 
+    @FindBy(xpath = "//*[@id=\"content\"]/section/div/div[1]/article/div/div[1]")
+    WebElement tShirt;
+
     public void signIn() {
         signInBtn.click();
     }

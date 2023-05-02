@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7e2cc12-6a57-4f6d-a4f6-5177fdd0f534" name="Changes" comment="features">
+    <list default="true" id="c7e2cc12-6a57-4f6d-a4f6-5177fdd0f534" name="Changes" comment="chromedriver repair, cucumber and gherkin update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/CreateAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/CreateAccountPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/chromedriver.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682804468087</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="chromedriver repair, cucumber and gherkin update">
+      <created>1682853549927</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1682853549927</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -157,6 +163,7 @@
     <MESSAGE value="pom update" />
     <MESSAGE value="cucumber" />
     <MESSAGE value="features" />
-    <option name="LAST_COMMIT_MESSAGE" value="features" />
+    <MESSAGE value="chromedriver repair, cucumber and gherkin update" />
+    <option name="LAST_COMMIT_MESSAGE" value="chromedriver repair, cucumber and gherkin update" />
   </component>
 </project>
