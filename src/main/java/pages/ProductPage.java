@@ -31,6 +31,9 @@ public class ProductPage {
     @FindBy(xpath = "//button[@class='btn btn-primary add-to-cart']")
     WebElement addToCartBtn;
 
+    @FindBy(xpath = "//div[1]/a[@class='btn btn-primary']")
+    WebElement proceedBtn;
+
     public String checkDiscount(){
         return discount.getText();
     }
@@ -49,7 +52,14 @@ public class ProductPage {
         wait.until(ExpectedConditions.elementToBeSelected(colorBlack));
         addToCartBtn.click();
 
-
     }
+
+    public void toCheckout(WebDriver driver){
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.visibilityOf(proceedBtn));
+        proceedBtn.click();
+    }
+
+
 
 }
