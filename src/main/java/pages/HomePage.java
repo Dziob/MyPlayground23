@@ -42,5 +42,9 @@ public class HomePage {
         driver.quit();
     }
 
+    public void chooseTshirt(){
+        tShirt.click();
+    }
+
 
 }

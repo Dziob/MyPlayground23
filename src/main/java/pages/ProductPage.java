@@ -51,9 +51,7 @@ public class ProductPage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.elementToBeSelected(colorBlack));
         addToCartBtn.click();
-
     }
-
     public void toCheckout(WebDriver driver){
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
         wait.until(ExpectedConditions.visibilityOf(proceedBtn));
