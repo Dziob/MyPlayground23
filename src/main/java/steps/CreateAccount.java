@@ -47,7 +47,7 @@ public class CreateAccount {
     @Then("The user can confirm the creation of the account by confirming the availability of the logout option")
     public void confirmAccount(){
         HomePage homePage = new HomePage(driver);
-        //Assert.assertTrue(homePage.accountConfirm(), "Account created");
+        Assert.assertTrue(homePage.accountConfirm());
     }
 
     @And("The user signs out")
@@ -55,7 +55,7 @@ public class CreateAccount {
         HomePage homePage = new HomePage(driver);
         homePage.logOut();
         homePage.logOutConfirm();
-        //Assert.assertTrue(homePage.logOutConfirm(), "User successfully logged out ");
+        Assert.assertTrue(homePage.logOutConfirm(), "User successfully logged out ");
     }
 
     @And("User close the page")

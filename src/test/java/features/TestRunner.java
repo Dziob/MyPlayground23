@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/java/features/AddtoCart.feature",
+        features = "src/test/java/features/CreateAccount.feature",
         glue = "steps",
         plugin = {"pretty"},
         publish = true

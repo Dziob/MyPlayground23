@@ -40,7 +40,7 @@ public class CreateAccountPage {
         socialTitleMrs.click();
         firstName.sendKeys("Magdalena");
         lastName.sendKeys("Dziob");
-        email.sendKeys("magda7@email.com");
+        email.sendKeys("magda11@email.com");
         password.sendKeys("haslo");
         customerDataPrivacyCheckbox.click();
         policyCheckbox.click();

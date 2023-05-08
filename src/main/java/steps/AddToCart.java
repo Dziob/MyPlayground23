@@ -6,7 +6,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import pages.HomePage;
 import pages.ProductPage;
@@ -59,7 +58,7 @@ public class AddToCart {
         ShoppingCart shoppingCart = new ShoppingCart(driver);
         Assert.assertEquals(shoppingCart.color(), "Black");
         Assert.assertEquals(shoppingCart.price(), "€19.12");
-        Assert.assertEquals(shoppingCart.qty(driver), "1");
+        Assert.assertEquals(shoppingCart.qty(driver), 1);
         Assert.assertEquals(shoppingCart.size(), "L");
     }
 
@@ -67,7 +66,7 @@ public class AddToCart {
     public void deleteItemFromCart(){
         ShoppingCart shoppingCart = new ShoppingCart(driver);
         shoppingCart.delete();
-        Assert.assertEquals(shoppingCart.confirmDelete(), "There are no more items in your cart");
+        Assert.assertEquals(shoppingCart.confirmDelete(driver), "There are no more items in your cart");
     }
 
     @And("User closes the page")
