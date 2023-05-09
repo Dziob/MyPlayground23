@@ -19,6 +19,8 @@ public class SweaterPage {
     @FindBy(id = "quantity_wanted")
     WebElement sweaterQty;
 
+    WebElement addToCart;
+
 
 
 }
