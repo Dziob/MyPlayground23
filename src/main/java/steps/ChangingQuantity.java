@@ -2,10 +2,13 @@ package steps;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import pages.HomePage;
 import pages.ProductPage;
+import pages.ShoppingCart;
 import pages.SweaterPage;
 
 public class ChangingQuantity {
@@ -29,6 +32,42 @@ public class ChangingQuantity {
         Assert.assertEquals(sweaterPage.sweaterDiscountCheck(), "SAVE 20%");
         sweaterPage.chooseSweaterSize();
 
+    }
+    @Then("Changing the quantity of the product to '5'")
+    public void qtyInTheCart(){
+        SweaterPage sweaterPage = new SweaterPage(driver);
+        sweaterPage.chooseQty();
+    }
+
+    @And("Proced to checkout")
+    public void checkout(){
+        SweaterPage sweaterPage = new SweaterPage(driver);
+        sweaterPage.AddSweaterToCart(driver);
+    }
+
+    @And("Checking if quantity and size are correct")
+    public void confirmProduct(){
+        ShoppingCart shoppingCart = new ShoppingCart(driver);
+        Assert.assertEquals(shoppingCart.size(), "L");
+        Assert.assertEquals(shoppingCart.qty(driver), 5);
+    }
+
+    @Then("Changing the quantity to '3'")
+    public void changingQty(){
+        ShoppingCart shoppingCart = new ShoppingCart(driver);
+        shoppingCart.qtyChange();
+    }
+
+    @And("Checking if quantity is correct")
+    public  void confirmQtyChange(){
+        ShoppingCart shoppingCart = new ShoppingCart(driver);
+        Assert.assertEquals(shoppingCart.qty(driver), 3);
+    }
+
+    @And("Closing the page")
+    public void quit(){
+        HomePage homePage = new HomePage(driver);
+        homePage.quit(driver);
     }
 
 }

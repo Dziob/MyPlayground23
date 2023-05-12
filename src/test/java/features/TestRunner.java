@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/java/features/AddToCart.feature",
+        features = "src/test/java/features/ChangingQuantity.feature",
         glue = "steps",
         plugin = {"pretty"},
         publish = true

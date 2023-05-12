@@ -32,6 +32,9 @@ public class ShoppingCart {
     @FindBy(xpath = "//span[@class='no-items']")
     WebElement confirmDelete;
 
+    @FindBy(xpath = "//input[@class='js-cart-line-product-quantity form-control']")
+    WebElement qty;
+
     public String size(){
         return checkSize.getText();
     }
@@ -42,6 +45,12 @@ public class ShoppingCart {
 
     public String price(){
         return checkPrice.getText();
+    }
+
+    public void qtyChange(){
+        qty.clear();
+        qty.sendKeys(String.valueOf(3));
+
     }
 
     public int qty(WebDriver driver){

@@ -28,6 +28,9 @@ public class SweaterPage {
     @FindBy(className = "add")
     WebElement addToCart;
 
+    @FindBy(xpath = "//div[1]/a[@class='btn btn-primary']")
+    WebElement proceedBtn;
+
     public String sweaterDiscountCheck(){
         return sweaterDiscount.getText();
     }
@@ -38,6 +41,7 @@ public class SweaterPage {
     }
 
     public void chooseQty(){
+        sweaterQty.clear();
         sweaterQty.sendKeys(String.valueOf(5));
     }
 
@@ -45,6 +49,8 @@ public class SweaterPage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.textToBe((By) sweaterQty, "5"));
         addToCart.click();
+        wait.until(ExpectedConditions.visibilityOf(proceedBtn));
+        proceedBtn.click();
     }
 
 
