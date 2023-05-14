@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.security.Key;
 import java.time.Duration;
 
 public class SweaterPage {
@@ -26,7 +27,7 @@ public class SweaterPage {
     @FindBy(id = "quantity_wanted")
     WebElement sweaterQty;
 
-    @FindBy(className = "add")
+    @FindBy(xpath = "//button[@class='btn btn-primary add-to-cart']")
     WebElement addToCart;
 
     @FindBy(xpath = "//div[1]/a[@class='btn btn-primary']")
@@ -38,19 +39,21 @@ public class SweaterPage {
 
     public void chooseSweaterSize(){
         Select size = new Select(sweaterSize);
-        size.selectByVisibleText("M");
+        size.selectByVisibleText("L");
     }
 
     public void chooseQty(){
         sweaterQty.click();
-        sweaterQty.sendKeys(Keys.CONTROL + "a");
+        //sweaterQty.sendKeys(Keys.CONTROL + "a");
         sweaterQty.sendKeys(String.valueOf(5));
+        sweaterQty.sendKeys(Keys.LEFT);
+        sweaterQty.sendKeys(Keys.BACK_SPACE);
 
     }
 
     public void AddSweaterToCart(WebDriver driver){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        //wait.until(ExpectedConditions.textToBe((By) sweaterQty, "5"));
+        wait.until(ExpectedConditions.textToBe((By) sweaterQty, "5"));
         addToCart.click();
         wait.until(ExpectedConditions.visibilityOf(proceedBtn));
         proceedBtn.click();
