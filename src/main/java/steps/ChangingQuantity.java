@@ -36,7 +36,7 @@ public class ChangingQuantity {
     @Then("Changing the quantity of the product to '5'")
     public void qtyInTheCart(){
         SweaterPage sweaterPage = new SweaterPage(driver);
-        sweaterPage.chooseQty();
+        sweaterPage.qtyUp(driver);
     }
 
     @And("Proced to checkout")

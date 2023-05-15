@@ -27,6 +27,9 @@ public class SweaterPage {
     @FindBy(id = "quantity_wanted")
     WebElement sweaterQty;
 
+    @FindBy(xpath = "//button[@class='btn btn-touchspin js-touchspin bootstrap-touchspin-up']")
+    WebElement sweaterQtyUp;
+
     @FindBy(xpath = "//button[@class='btn btn-primary add-to-cart']")
     WebElement addToCart;
 
@@ -42,13 +45,21 @@ public class SweaterPage {
         size.selectByVisibleText("L");
     }
 
-    public void chooseQty(){
-        sweaterQty.click();
-        //sweaterQty.sendKeys(Keys.CONTROL + "a");
-        sweaterQty.sendKeys(String.valueOf(5));
-        sweaterQty.sendKeys(Keys.LEFT);
-        sweaterQty.sendKeys(Keys.BACK_SPACE);
+//    public void chooseQty(){
+//        sweaterQty.click();
+//        //sweaterQty.sendKeys(Keys.CONTROL + "a");
+//        sweaterQty.sendKeys(String.valueOf(5));
+//        sweaterQty.sendKeys(Keys.LEFT);
+//        sweaterQty.sendKeys(Keys.BACK_SPACE);
 
+
+
+    public void qtyUp(WebDriver driver){
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.textToBePresentInElement(sweaterSize, "L"));
+        for(int i = 1; i < 5; i++){
+            sweaterQtyUp.click();
+        }
     }
 
     public void AddSweaterToCart(WebDriver driver){
