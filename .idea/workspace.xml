@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7e2cc12-6a57-4f6d-a4f6-5177fdd0f534" name="Changes" comment="Qty problem 4">
+    <list default="true" id="c7e2cc12-6a57-4f6d-a4f6-5177fdd0f534" name="Changes" comment="Qty problem 5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/SweaterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/SweaterPage.java" afterDir="false" />
     </list>
@@ -267,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684156275806</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Qty problem 5">
+      <created>1684242174563</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1684242174563</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -313,7 +320,8 @@
     <MESSAGE value="Qty problem 2" />
     <MESSAGE value="Qty problem 3" />
     <MESSAGE value="Qty problem 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Qty problem 4" />
+    <MESSAGE value="Qty problem 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Qty problem 5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -325,22 +333,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/pages/SweaterPage.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pages/SweaterPage.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pages/SweaterPage.java</url>
-          <line>67</line>
+          <line>74</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/pages/SweaterPage.java</url>
-          <line>69</line>
+          <line>76</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>

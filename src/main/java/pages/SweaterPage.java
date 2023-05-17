@@ -57,14 +57,21 @@ public class SweaterPage {
     public void qtyUp(WebDriver driver){
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.textToBePresentInElement(sweaterSize, "L"));
-        for(int i = 1; i < 5; i++){
-            sweaterQtyUp.click();
+//        for(int i = 1; i < 5; i++){
+//            sweaterQtyUp.click();
+        sweaterQtyUp.click();
+        sweaterQtyUp.click();
+        sweaterQtyUp.click();
+        sweaterQtyUp.click();
+        sweaterQtyUp.click();
+
         }
-        wait.until(ExpectedConditions.textToBePresentInElement(sweaterQty,"5"));
-    }
+
+
 
     public void AddSweaterToCart(WebDriver driver){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.textToBePresentInElement(sweaterQty,"5"));
         addToCart.click();
         wait.until(ExpectedConditions.visibilityOf(proceedBtn));
         proceedBtn.click();
