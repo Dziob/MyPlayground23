@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7e2cc12-6a57-4f6d-a4f6-5177fdd0f534" name="Changes" comment="Qty problem 6">
+    <list default="true" id="c7e2cc12-6a57-4f6d-a4f6-5177fdd0f534" name="Changes" comment="Qty in the cart problem - resolve">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ShoppingCart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/SweaterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/SweaterPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/steps/ChangingQuantity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/ChangingQuantity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -281,7 +283,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684329020658</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Qty in the cart problem - resolve">
+      <created>1684445349961</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1684445349961</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -329,25 +338,21 @@
     <MESSAGE value="Qty problem 4" />
     <MESSAGE value="Qty problem 5" />
     <MESSAGE value="Qty problem 6" />
-    <option name="LAST_COMMIT_MESSAGE" value="Qty problem 6" />
+    <MESSAGE value="Qty in the cart problem - resolve" />
+    <option name="LAST_COMMIT_MESSAGE" value="Qty in the cart problem - resolve" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/pages/SweaterPage.java</url>
-          <line>16</line>
+          <line>14</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pages/SweaterPage.java</url>
-          <line>75</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pages/SweaterPage.java</url>
-          <line>77</line>
-          <option name="timeStamp" value="9" />
+          <url>file://$PROJECT_DIR$/src/test/java/features/TestRunner.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

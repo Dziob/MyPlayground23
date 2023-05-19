@@ -58,7 +58,7 @@ public class AddToCart {
         ShoppingCart shoppingCart = new ShoppingCart(driver);
         Assert.assertEquals(shoppingCart.color(), "Black");
         Assert.assertEquals(shoppingCart.price(), "€19.12");
-        Assert.assertEquals(shoppingCart.qty(driver), 1);
+        Assert.assertEquals(shoppingCart.qty(), 1);
         Assert.assertEquals(shoppingCart.size(), "L");
     }
 

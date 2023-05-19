@@ -1,6 +1,5 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,7 +9,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.security.Key;
 import java.time.Duration;
 
 public class SweaterPage {
@@ -27,9 +25,6 @@ public class SweaterPage {
     @FindBy(id = "quantity_wanted")
     WebElement sweaterQty;
 
-    @FindBy(xpath = "//button[@class='btn btn-touchspin js-touchspin bootstrap-touchspin-up']")
-    WebElement sweaterQtyUp;
-
     @FindBy(xpath = "//button[@class='btn btn-primary add-to-cart']")
     WebElement addToCart;
 
@@ -45,18 +40,7 @@ public class SweaterPage {
         size.selectByVisibleText("L");
     }
 
-//    public void chooseQty(){
-//        sweaterQty.click();
-//        //sweaterQty.sendKeys(Keys.CONTROL + "a");
-//        sweaterQty.sendKeys(String.valueOf(5));
-//        sweaterQty.sendKeys(Keys.LEFT);
-//        sweaterQty.sendKeys(Keys.BACK_SPACE);
-
-
-
-    public void qtyUp(WebDriver driver) {
-//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//        wait.until(ExpectedConditions.textToBePresentInElement(sweaterSize, "L"));
+    public void qtyUp() {
         try {
             Thread.sleep(500);
         } catch (InterruptedException e) {
@@ -64,11 +48,7 @@ public class SweaterPage {
         }
         sweaterQty.sendKeys(Keys.CONTROL + "a");
         sweaterQty.sendKeys(String.valueOf(5));
-
     }
-
-
-
 
     public void AddSweaterToCart(WebDriver driver){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));

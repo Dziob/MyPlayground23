@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -48,13 +49,12 @@ public class ShoppingCart {
     }
 
     public void qtyChange(){
-        qty.clear();
+        qty.sendKeys(Keys.CONTROL + "a");
         qty.sendKeys(String.valueOf(3));
 
     }
 
-    public int qty(WebDriver driver){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5) );
+    public int qty(){
         return Integer.parseInt(checkQty.getAttribute("value"));
     }
 

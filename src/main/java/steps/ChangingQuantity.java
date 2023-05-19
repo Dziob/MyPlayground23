@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import pages.HomePage;
-import pages.ProductPage;
 import pages.ShoppingCart;
 import pages.SweaterPage;
 
@@ -36,7 +35,7 @@ public class ChangingQuantity {
     @Then("Changing the quantity of the product to '5'")
     public void qtyInTheCart(){
         SweaterPage sweaterPage = new SweaterPage(driver);
-        sweaterPage.qtyUp(driver);
+        sweaterPage.qtyUp();
     }
 
     @And("Proced to checkout")
@@ -49,7 +48,7 @@ public class ChangingQuantity {
     public void confirmProduct(){
         ShoppingCart shoppingCart = new ShoppingCart(driver);
         Assert.assertEquals(shoppingCart.size(), "L");
-        Assert.assertEquals(shoppingCart.qty(driver), 5);
+        Assert.assertEquals(shoppingCart.qty(), 5);
     }
 
     @Then("Changing the quantity to '3'")
@@ -61,7 +60,7 @@ public class ChangingQuantity {
     @And("Checking if quantity is correct")
     public  void confirmQtyChange(){
         ShoppingCart shoppingCart = new ShoppingCart(driver);
-        Assert.assertEquals(shoppingCart.qty(driver), 3);
+        Assert.assertEquals(shoppingCart.qty(), 3);
     }
 
     @And("Closing the page")
